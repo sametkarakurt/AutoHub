@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "885557646753",
+    "project_id": "autohub-6bd1b",
+    "storage_bucket": "autohub-6bd1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885557646753:android:a289b9e1c7789bb2c767e0",
+        "android_client_info": {
+          "package_name": "com.example.autohub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885557646753-3e5h8sacunu1debdhv4j3b419kr0jv57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ89Uy90lVWNa2p_acFEArYAUrrdI_ffY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885557646753-3e5h8sacunu1debdhv4j3b419kr0jv57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

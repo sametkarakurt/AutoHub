@@ -4,24 +4,36 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.autohub.databinding.RecyclerRowBinding
-import com.example.autohub.model.Post
+import Post
 import com.squareup.picasso.Picasso
 
-class FeedRecyclerAdapter(private val postList : ArrayList<Post>) : RecyclerView.Adapter<FeedRecyclerAdapter.PostHolder>() {
+class FeedRecyclerAdapter(private val postList: ArrayList<Post>, private val onItemClick: (Post) -> Unit) :
+    RecyclerView.Adapter<FeedRecyclerAdapter.PostHolder>() {
 
-    class PostHolder(val binding: RecyclerRowBinding): RecyclerView.ViewHolder(binding.root) {
-
+    inner class PostHolder(val binding: RecyclerRowBinding) : RecyclerView.ViewHolder(binding.root) {
+        init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val selectedPost = postList[position]
+                    onItemClick(selectedPost)
+                }
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostHolder {
-        val binding = RecyclerRowBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding = RecyclerRowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PostHolder(binding)
     }
 
     override fun onBindViewHolder(holder: PostHolder, position: Int) {
-        holder.binding.recyclerUsernameText.text = postList.get(position).username
-        holder.binding.recyclerBrandText.text = postList.get(position).brand
-        Picasso.get().load(postList.get(position).downloadUrl).into(holder.binding.recyclerImageView)
+        val currentPost = postList[position]
+        with(holder.binding) {
+            recyclerUsernameText.text = currentPost.username
+            recyclerBrandText.text = currentPost.brand
+            Picasso.get().load(currentPost.downloadUrl).into(recyclerImageView)
+        }
     }
 
     override fun getItemCount(): Int {

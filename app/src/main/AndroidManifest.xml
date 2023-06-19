@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.autohub">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AutoHub"
         tools:targetApi="31">
+        <activity
+            android:name=".view.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.detail"
+            android:exported="false" />
         <activity
             android:name=".view.UploadActivity"
             android:exported="false" />

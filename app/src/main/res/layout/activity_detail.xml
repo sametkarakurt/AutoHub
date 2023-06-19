@@ -68,4 +68,16 @@
         android:textColor="@android:color/black"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Delete"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:onClick="deletePost"
+        />
+
 </LinearLayout>

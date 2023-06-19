@@ -71,6 +71,7 @@ class UploadActivity : AppCompatActivity() {
                                 val downloadUrl2 = it.toString()
                                 if(auth.currentUser != null){
                                     val postMap = hashMapOf<String,Any>()
+
                                     postMap.put("downloadUrl",downloadUrl)
                                     postMap.put("downloadUrl2",downloadUrl2)
                                     postMap.put("userEmail",auth.currentUser!!.email!!)

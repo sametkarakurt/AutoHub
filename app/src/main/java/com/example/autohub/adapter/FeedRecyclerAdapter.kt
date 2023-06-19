@@ -7,7 +7,7 @@ import com.example.autohub.databinding.RecyclerRowBinding
 import Post
 import com.squareup.picasso.Picasso
 
-class FeedRecyclerAdapter(private val postList: ArrayList<Post>, private val onItemClick: (Post) -> Unit) :
+class FeedRecyclerAdapter(private val postList: ArrayList<Post>, private val onItemClick: ((Post) -> Unit)? = null) :
     RecyclerView.Adapter<FeedRecyclerAdapter.PostHolder>() {
 
     inner class PostHolder(val binding: RecyclerRowBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -16,7 +16,7 @@ class FeedRecyclerAdapter(private val postList: ArrayList<Post>, private val onI
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     val selectedPost = postList[position]
-                    onItemClick(selectedPost)
+                    onItemClick?.let { it1 -> it1(selectedPost) }
                 }
             }
         }

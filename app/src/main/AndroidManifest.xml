@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AutoHub"
         tools:targetApi="31">
         <activity
+            android:name=".view.MyPostsActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.DetailActivity"
             android:exported="false" />
         <activity

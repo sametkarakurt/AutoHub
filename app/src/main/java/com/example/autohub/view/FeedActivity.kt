@@ -96,6 +96,10 @@ class FeedActivity : AppCompatActivity() {
                 val intent = Intent(this, UploadActivity::class.java)
                 startActivity(intent)
             }
+            R.id.my_posts -> {
+                val intent = Intent(this, MyPostsActivity::class.java)
+                startActivity(intent)
+            }
             else -> {
                 auth.signOut()
                 val intent = Intent(this, MainActivity::class.java)

@@ -5,20 +5,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical"
+
     android:padding="16dp"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="200dp">
 
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
+            android:layout_height="144dp"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true" />
 
@@ -33,12 +36,30 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/usernameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Username"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/usernameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Username"
         android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/brandTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Brand"
+        android:textColor="@android:color/white"
         android:textStyle="bold" />
 
     <TextView
@@ -47,7 +68,16 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
         android:text="Brand"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/accessoriesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Accessories"
+        android:textColor="@android:color/white"
         android:textStyle="bold" />
 
     <TextView
@@ -56,17 +86,26 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
         android:text="Accessories"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/commentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Comment"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/commentText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
         android:text="Comment"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textStyle="bold" />
+
 
     <Button
         android:id="@+id/deleteButton"
